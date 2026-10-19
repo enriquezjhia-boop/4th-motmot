@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eli's Little World</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a href="#" class="logo" data-open-page="bedroom"
+        >our cozy room <span>♡</span></a
+      >
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        ☰
+      </button>
+      <nav class="navigation" id="navigation">
+        <button class="nav-link active" data-page="bedroom">
+          ⌂ <span>Bedroom</span>
+        </button>
+        <button class="nav-link" data-page="nailong">
+          ♡ <span>Nailong<3</span>
+        </button>
+        <button class="nav-link" data-page="memories">
+          ✧ <span>Memories</span>
+        </button>
+        <button class="nav-link" data-page="song">♫ <span>Song</span></button>
+        <a class="nav-link nav-hug" href="page2.html"
+          >♡ <span>hugs and kisses!</span></a
+        >
+      </nav>
+    </header>
+
+    <main>
+      <section class="page active" id="bedroom">
+        <div class="hero">
+          <div class="hero-text">
+            <p class="eyebrow">MAMAHALIN KA SA ARAW ARAW</p>
+            <h1>Welcome home,<br /><span>Eli.</span></h1>
+            <p class="intro">
+              A tiny corner of the world where everything reminds me of you.
+            </p>
+            <button class="primary-button" data-open-page="room">
+              Explore with bochog! <span>→</span>
+            </button>
+            <p class="small-note">Made with love. <br />-Bochog</p>
+          </div>
+
+          <div class="hero-art">
+            <div class="stars">✧　·　✧</div>
+            <div class="moon"></div>
+            <div class="window">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div class="plant">♧</div>
+            <div class="bed">
+              <div class="pillow"></div>
+              <div class="blanket"></div>
+            </div>
+            <div class="rug"></div>
+            <div class="floor-lamp"><span></span></div>
+            <div class="floating-heart heart-one">♡</div>
+            <div class="floating-heart heart-two">✧</div>
+          </div>
+        </div>
+
+        <div class="section room-section" id="room">
+          <div class="section-heading">
+            <p class="eyebrow">TAKE A LOOK AROUND</p>
+            <h2>Your little bedroom</h2>
+            <p>Choose something, Mahal. Each one has a note hehe :D</p>
+          </div>
+
+          <div class="room-grid">
+            <button class="room-card" data-message="flowers">
+              <span class="room-symbol">✿</span>
+              <h3>Fresh lilies</h3>
+              <p>You’re my favorite kind of bloom.</p>
+              <span class="card-hint">Open note ↗</span>
+            </button>
+            <button class="room-card" data-message="music">
+              <span class="room-symbol">♫</span>
+              <h3>Music corner</h3>
+              <p>For every song you sing.</p>
+              <span class="card-hint">Open note ↗</span>
+            </button>
+            <button class="room-card" data-message="cat">
+              <span class="room-symbol">⌁</span>
+              <h3>Grey cat</h3>
+              <p>Your sleepy little companion, soon!</p>
+              <span class="card-hint">Open note ↗</span>
+            </button>
+            <button class="room-card" data-message="mirror">
+              <span class="room-symbol">✧</span>
+              <h3>Vanity corner</h3>
+              <p>For all your pretty moments.</p>
+              <span class="card-hint">Open note ↗</span>
+            </button>
+          </div>
+          <button class="text-button" data-open-page="nailong">
+            Next: your little friend →
+          </button>
+        </div>
+      </section>
+
+      <section class="page" id="nailong">
+        <div class="page-heading">
+          <p class="eyebrow">A LITTLE FRIEND FOR YOU, MAHAL KO!</p>
+          <h1>Nailong corner</h1>
+          <p>I'll send you the link here hehe, you can add yours :D</p>
+        </div>
+
+        <div class="nailong-layout">
+          <div class="nailong-display">
+            <div class="nailong-glow"></div>
+            <img id="nailongImage" alt="Nailong will appear here" hidden />
+            <div id="nailongPlaceholder" class="nailong-placeholder">
+              <span>♡</span>
+              <p>Your Nailong picture will appear here.</p>
+            </div>
+            <p class="image-caption">your little sunshine</p>
+          </div>
+
+          <div class="nailong-controls">
+            <p class="eyebrow">MAKE IT YOURS</p>
+            <h2>Add your Nailong</h2>
+            <p>Paste it here, lovie ko!</p>
+            <label for="nailongUrl">Nailong image link</label>
+            <input
+              id="nailongUrl"
+              type="url"
+              placeholder="https://example.com/nailong.png"
+            />
+            <button class="primary-button" id="loadNailong">
+              Show my Nailong
+            </button>
+            <p id="nailongMessage" class="response-text" aria-live="polite"></p>
+            <button class="secondary-button" id="nailongHello">
+              Say hello
+            </button>
+            <p class="little-note">
+              A tiny friend to keep you company whenever you visit.
+            </p>
+          </div>
+        </div>
+
+        <div class="page-footer-nav">
+          <button class="text-button" data-open-page="bedroom">
+            ← Bedroom
+          </button>
+          <button class="text-button" data-open-page="memories">
+            Next: our memories →
+          </button>
+        </div>
+      </section>
+
+      <section class="page" id="memories">
+        <div class="page-heading">
+          <p class="eyebrow">OUR LITTLE TIMELINE</p>
+          <h1>How we became us</h1>
+          <p>I'll never forget about this part^^</p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <span class="timeline-dot"></span>
+            <p class="timeline-date">THE BEGINNING</p>
+            <h2>The first campus day</h2>
+            <p>
+              You noticed me, and then suddenly, I noticed you too. That was the
+              best part.
+            </p>
+          </article>
+          <article class="timeline-item">
+            <span class="timeline-dot"></span>
+            <p class="timeline-date">AUGUST 7, 2025</p>
+            <h2>Our first conversations</h2>
+            <p>
+              Our little conversations on Instagram began, and I got to know you
+              a little more.
+            </p>
+          </article>
+          <article class="timeline-item">
+            <span class="timeline-dot"></span>
+            <p class="timeline-date">FEBRUARY 12, 2026</p>
+            <h2>I chose to pursue you</h2>
+            <p>
+              I wanted to show you that my feelings were real and that you were
+              worth the effort.
+            </p>
+          </article>
+          <article class="timeline-item">
+            <span class="timeline-dot"></span>
+            <p class="timeline-date">JUNE 20, 2026</p>
+            <h2>The day we became us</h2>
+            <p>
+              Your birthday became even more special to me because it became the
+              start of us, too!
+            </p>
+          </article>
+          <article class="timeline-item">
+            <span class="timeline-dot"></span>
+            <p class="timeline-date">OCTOBER 20, 2026</p>
+            <h2>Our fourth monthsary</h2>
+            <p>
+              Four months of choosing each other. I hope we keep making
+              memories, one day at a time.
+            </p>
+          </article>
+        </div>
+
+        <div class="page-footer-nav">
+          <button class="text-button" data-open-page="nailong">
+            ← Nailong
+          </button>
+          <button class="text-button" data-open-page="song">
+            Next: our song →
+          </button>
+        </div>
+      </section>
+
+      <section class="page" id="song">
+        <div class="song-page-content">
+          <div class="song-disc"><span>♫</span></div>
+          <p class="eyebrow">A SONG DEDICATED TO YOU</p>
+          <h1>Our Song</h1>
+          <p class="song-description">
+            Some feelings are easier to say through a song. This one's here for
+            you, whenever you want to listen.
+          </p>
+          <div class="song-details">
+            <span class="song-symbol">♡</span>
+            <div>
+              <h2>For you, love love ko</h2>
+              <p>A little song from me to you.</p>
+            </div>
+          </div>
+          <button class="primary-button" id="copySongLink">
+            Copy YouTube link
+          </button>
+          <p id="songResponse" class="response-text" aria-live="polite"></p>
+          <a
+            class="secondary-button youtube-link"
+            href="https://youtu.be/51Jn7_lW58o?si=kphrOZ4Yzf4RTaXg"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Open YouTube</a
+          >
+          <p class="little-note">
+            Copy the link to share it, or open YouTube to listen.
+          </p>
+        </div>
+        <div class="page-footer-nav">
+          <button class="text-button" data-open-page="memories">
+            ← Our memories
+          </button>
+          <a class="text-button" href="page2.html">Next: a hug for you →</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Made for Eli, with all my love.</p>
+      <p>October 20, 2026 <span>♡</span></p>
+    </footer>
+
+    <div class="modal" id="noteModal" aria-hidden="true">
+      <div class="modal-card">
+        <button class="modal-close" id="closeModal" aria-label="Close note">
+          ×
+        </button>
+        <p class="eyebrow">A LITTLE NOTE FOR YOU</p>
+        <h2 id="modalTitle">For you</h2>
+        <p id="modalMessage"></p>
+        <button class="secondary-button" id="modalDone">Keep this note</button>
+      </div>
+    </div>
+  </body>
+</html>
